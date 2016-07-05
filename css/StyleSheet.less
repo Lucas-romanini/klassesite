@@ -1,0 +1,115 @@
+﻿@width: 960px;
+@red: #ad3532;
+@blue: #80bcd7;
+@grey-dark: darken(#323232,20%);
+@grey: (#323232);
+@grey-light:lighten(@grey, 20%);
+@grey-lighter:lighten(@grey-light, 20%);
+@grey-lightest:lighten(@grey-lighter, 30%);
+
+
+
+
+
+
+body {
+    font-family: Arial, Tahoma, Helvetica, sans-serif;
+}
+
+#header, #main-content, #footer {
+    width: @width;
+    margin: 0 auto;
+    min-height: 100px;
+}
+
+/*▼--Header--▼*/
+
+header {
+    background: linear-gradient(#fff, @grey-lightest);
+    height: 110px;
+
+    img {
+        width: 247px;
+        height: 110px;
+        float: left;
+    }
+
+    .main-navigation {
+        height: 60px;
+        width: 600px;
+        float: right;
+        margin-top: 25px;
+        margin-bottom:0;
+        font-size:20px;
+        ul {
+            float: right;
+            list-style-type: none;
+
+            list-style: none;
+            padding: 5px;
+            min-width: 15px;
+            margin-right: 10px;
+            margin-top:10px;
+            
+            li {
+                float: left;
+                height: 20px;
+                min-width: 35px;
+                line-height: 20px;
+                padding: 5px;
+
+                a {
+                    color: @grey;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline overline;
+                    }
+                }
+            }
+        }
+        li a, .dropbtn {
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .dropdown-content {
+            z-index: 1;
+            display:none;
+            filter: alpha(opacity=0);
+            position: absolute;
+            background-color: @grey-lightest;
+            width:315px;
+            /*-moz-transition: ease-in 0.2s;
+            -o-transition: ease-in 0.2s;
+            -webkit-transition: ease-in 0.2s;
+            transition: ease-in 0.2s;*/
+            border-radius: 0 0 5px 5px;
+            }
+        
+        }
+
+
+        .dropdown-content a {
+            color: black;
+            width:91.188px;
+            height: 20px;
+            padding: 5px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            text-decoration: none;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display:block;
+            filter: alpha(opacity=100);
+        }
+    }
+
+
+/*▲--Header--▲*/
+
